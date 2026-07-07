@@ -27,12 +27,15 @@ target-version = ['py38']
 
 [tool.ruff]
 line-length = 88
-
-[tool.ruff.lint]
 select = ["E", "F", "I", "N", "W"]
-ignore = ["E501", "I001"]
+ignore = ["E501"]
 
 [tool.mypy]
 python_version = "3.8"
 warn_return_any = true
 warn_unused_configs = true
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "ignore:FigureCanvasAgg is non-interactive.*cannot be shown:UserWarning",
+]

@@ -31,7 +31,7 @@ def test_plot_results_saves_file():
 
 
 def test_plot_results_with_show_true():
-    """Test plot_results with show=True to cover plt.show() branch."""
+    """Test plot_results with show=True – warning is filtered via pyproject.toml."""
     points = np.random.rand(100, 2) * 100
     selected = [10, 20, 30]
     libraries = np.random.rand(5, 2) * 100
