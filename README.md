@@ -1,10 +1,10 @@
-# 🧬 Site Selection Using Genetic Algorithm (GA)
-
 [![CI](https://github.com/mohammad-hussein-dev/site-selection-ga/actions/workflows/ci.yml/badge.svg)](https://github.com/mohammad-hussein-dev/site-selection-ga/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/mohammad-hussein-dev/site-selection-ga/branch/main/graph/badge.svg)](https://codecov.io/gh/mohammad-hussein-dev/site-selection-ga)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+# 🧬 Site Selection Using Genetic Algorithm (GA)
 
 > **Optimal school site selection using Genetic Algorithm (GA)** — turning complex spatial optimization into an evolutionary search problem.
 
@@ -111,6 +111,14 @@ You will see:
 
 ---
 
+## 🖼️ Demo
+
+![Site Selection Result](site_selection_result.png)
+
+*The plot shows 100 candidate points (blue), 3 selected schools (red stars), and existing facilities (libraries, hospitals, fire stations).*
+
+---
+
 ## 📊 Sample Output
 
 ### Terminal Output
@@ -131,17 +139,6 @@ gen     nevals  avg             max
 ⭐ Fitness value: -0.5025
 ============================================================
 ```
-
-### Plot Output
-
-![Site Selection Result](site_selection_result.png)
-
-The plot shows:
-- **Blue dots**: 100 candidate points
-- **Red stars**: 3 selected school locations
-- **Green triangles**: Libraries
-- **Orange squares**: Hospitals
-- **Purple diamonds**: Fire stations
 
 ---
 
@@ -183,13 +180,16 @@ site-selection-ga/
 ├── src/
 │   └── site_selection/
 │       ├── __init__.py
+│       ├── __main__.py
 │       ├── algorithm.py
 │       ├── fitness.py
 │       └── visualization.py
 ├── tests/
 │   ├── __init__.py
+│   ├── conftest.py
+│   ├── test_algorithm.py
 │   ├── test_fitness.py
-│   └── test_algorithm.py
+│   └── test_visualization.py
 ├── scripts/
 │   └── run.py
 ├── README.md
@@ -240,4 +240,4 @@ This project is open-source and available under the **MIT License**.
 ---
 
 > *"Optimization is not just about finding the best answer — it's about understanding the problem deeply enough to know what 'best' really means."*
-# trigger ci
+
