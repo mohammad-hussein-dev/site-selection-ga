@@ -27,3 +27,9 @@ env/
 
 # Output
 site_selection_result.png
+
+# Coverage
+.coverage
+coverage.xml
+*.pyc
+__pycache__/

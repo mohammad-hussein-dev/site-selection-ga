@@ -1,6 +1,10 @@
 [run]
 source = src
-omit = */tests/*, */scripts/*
+omit = 
+    */tests/*
+    */scripts/*
+    */site_selection/__main__.py
+    */conftest.py
 
 [report]
 exclude_lines =
