@@ -1,7 +1,6 @@
 """Tests for fitness function."""
 
 import numpy as np
-import pytest
 from src.site_selection.fitness import fitness_function
 
 
