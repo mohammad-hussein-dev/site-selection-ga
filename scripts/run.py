@@ -2,7 +2,8 @@
 """Main script to run the site selection optimization."""
 
 import numpy as np
-from src.site_selection import run_ga, plot_results
+
+from src.site_selection import plot_results, run_ga
 
 
 def generate_data(seed=42):

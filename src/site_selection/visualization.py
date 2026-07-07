@@ -1,8 +1,7 @@
 """Visualization utilities for site selection results."""
 
 import matplotlib.pyplot as plt
-import matplotlib
-matplotlib.use('Agg')  # برای محیط‌های بدون نمایشگر (مانند CI)
+
 
 def plot_results(points, selected_indices, libraries, hospitals, fire_stations,
                  save_path=None, show=True):

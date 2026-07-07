@@ -1,7 +1,9 @@
 """Tests for visualization module."""
 
 import os
+
 import numpy as np
+
 from src.site_selection.visualization import plot_results
 
 

@@ -1,8 +1,9 @@
 """Genetic Algorithm implementation for site selection."""
 
 import random
+
 import numpy as np
-from deap import base, creator, tools, algorithms
+from deap import algorithms, base, creator, tools
 
 from .fitness import fitness_function
 

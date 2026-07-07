@@ -1,6 +1,7 @@
 """Tests for genetic algorithm."""
 
 import numpy as np
+
 from src.site_selection.algorithm import run_ga
 
 

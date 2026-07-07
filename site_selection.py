@@ -3,10 +3,11 @@
 # مکان‌یابی بهینه با استفاده از الگوریتم ژنتیک                  #
 # ============================================================ #
 
-import numpy as np
-import matplotlib.pyplot as plt
-from deap import base, creator, tools, algorithms
 import random
+
+import matplotlib.pyplot as plt
+import numpy as np
+from deap import algorithms, base, creator, tools
 
 # ============================================================ #
 # 1. DATA GENERATION / تولید داده‌های ساختگی                    #

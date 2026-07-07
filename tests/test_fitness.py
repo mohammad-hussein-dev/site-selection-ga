@@ -1,7 +1,7 @@
 """Tests for fitness function."""
 
 import numpy as np
-import pytest
+
 from src.site_selection.fitness import fitness_function
 
 
@@ -40,7 +40,7 @@ def test_fitness_function_spread_zero():
     hospitals = np.random.rand(3, 2) * 100
     fire_stations = np.random.rand(3, 2) * 100
 
-    selected = [10, 20]  # only 2 points
+    selected = [10, 20]
 
     result = fitness_function(selected, points, population,
                               libraries, hospitals, fire_stations)
