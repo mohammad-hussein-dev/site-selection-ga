@@ -1,13 +1,35 @@
 #!/usr/bin/env python
-"""Main script to run the site selection optimization."""
+"""
+Main entry point for the site selection optimization.
+
+This script generates synthetic data, runs the Genetic Algorithm,
+and displays the results with a plot.
+"""
 
 import numpy as np
+from typing import Tuple
 
-from src.site_selection import plot_results, run_ga
+from src.site_selection import run_ga, plot_results
 
 
-def generate_data(seed=42):
-    """Generate synthetic data for demonstration."""
+def generate_data(seed: int = 42) -> Tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
+    """
+    Generate synthetic data for demonstration purposes.
+
+    This function creates random candidate points, population densities,
+    and facility locations to illustrate the optimization process.
+
+    Args:
+        seed: Random seed for reproducibility (default: 42).
+
+    Returns:
+        A tuple containing:
+            - points: Array of shape (100, 2) with candidate coordinates.
+            - population: Array of shape (100,) with population densities.
+            - libraries: Array of shape (5, 2) with library coordinates.
+            - hospitals: Array of shape (3, 2) with hospital coordinates.
+            - fire_stations: Array of shape (3, 2) with fire station coordinates.
+    """
     np.random.seed(seed)
     n_points = 100
     points = np.random.rand(n_points, 2) * 100
@@ -18,10 +40,21 @@ def generate_data(seed=42):
     return points, population, libraries, hospitals, fire_stations
 
 
-def main():
+def main() -> None:
+    """
+    Run the optimization and display results.
+
+    This is the main execution function that:
+        1. Generates synthetic data.
+        2. Runs the Genetic Algorithm.
+        3. Prints the optimal solution.
+        4. Plots the results.
+    """
+    # Generate synthetic data
     points, population, libraries, hospitals, fire_stations = generate_data()
 
-    best_indices, best_fitness, log = run_ga(
+    # Run the Genetic Algorithm
+    best_indices, best_fitness, _ = run_ga(
         points=points,
         population=population,
         libraries=libraries,
@@ -31,17 +64,19 @@ def main():
         n_select=3,
         pop_size=50,
         ngen=100,
-        verbose=True
+        verbose=True,
     )
 
+    # Print the final results
     print("\n" + "=" * 60)
-    print("🏫 FINAL RESULT / نتیجه نهایی")
+    print("FINAL RESULT")
     print("=" * 60)
-    print(f"📌 Selected indices: {best_indices}")
-    print(f"📍 Coordinates: {points[best_indices]}")
-    print(f"⭐ Fitness value: {best_fitness:.4f}")
+    print(f"Selected indices: {best_indices}")
+    print(f"Coordinates: {points[best_indices]}")
+    print(f"Fitness value: {best_fitness:.4f}")
     print("=" * 60)
 
+    # Plot the results
     plot_results(
         points=points,
         selected_indices=best_indices,
@@ -49,7 +84,7 @@ def main():
         hospitals=hospitals,
         fire_stations=fire_stations,
         save_path="site_selection_result.png",
-        show=True
+        show=True,
     )
 
 
