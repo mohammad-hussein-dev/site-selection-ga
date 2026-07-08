@@ -6,10 +6,11 @@ This script generates synthetic data, runs the Genetic Algorithm,
 and displays the results with a plot.
 """
 
-import numpy as np
 from typing import Tuple
 
-from src.site_selection import run_ga, plot_results
+import numpy as np
+
+from src.site_selection import plot_results, run_ga
 
 
 def generate_data(seed: int = 42) -> Tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray]:

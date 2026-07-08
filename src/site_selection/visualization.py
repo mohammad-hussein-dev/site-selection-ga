@@ -5,9 +5,10 @@ This module provides functions to plot candidate points, selected schools,
 and existing facilities (libraries, hospitals, fire stations).
 """
 
+from typing import List, Optional
+
 import matplotlib.pyplot as plt
 import numpy as np
-from typing import List, Optional, Tuple
 
 
 def plot_results(

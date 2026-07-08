@@ -6,9 +6,10 @@ to evolve a population of candidate solutions (sets of 3 locations).
 """
 
 import random
+from typing import Any, List, Tuple
+
 import numpy as np
-from typing import List, Tuple, Any
-from deap import base, creator, tools, algorithms
+from deap import algorithms, base, creator, tools
 
 from .fitness import fitness_function
 

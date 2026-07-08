@@ -5,8 +5,9 @@ This module defines the multi-criteria fitness function used by the Genetic Algo
 to evaluate candidate solutions (sets of 3 school locations).
 """
 
-import numpy as np
 from typing import List, Tuple
+
+import numpy as np
 
 
 def fitness_function(
