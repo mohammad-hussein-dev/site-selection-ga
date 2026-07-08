@@ -1,16 +1,17 @@
+# 🧬 Site Selection Using Genetic Algorithm (GA)
+
 [![CI](https://github.com/mohammad-hussein-dev/site-selection-ga/actions/workflows/ci.yml/badge.svg)](https://github.com/mohammad-hussein-dev/site-selection-ga/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/mohammad-hussein-dev/site-selection-ga/branch/main/graph/badge.svg)](https://codecov.io/gh/mohammad-hussein-dev/site-selection-ga)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-
-# 🧬 Site Selection Using Genetic Algorithm (GA)
+[![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
 
 > **Optimal school site selection using Genetic Algorithm (GA)** — turning complex spatial optimization into an evolutionary search problem.
 
 ---
 
-## 📚 Table of Contents
+## 📑 Table of Contents
 
 - [Overview](#-overview)
 - [Features](#-features)
@@ -26,7 +27,7 @@
 
 ---
 
-## 🔍 Overview
+## 📖 Overview
 
 This project solves a **spatial optimization problem**: selecting **3 school locations** from **100 candidate points** to maximize population coverage, minimize distance to existing facilities (libraries, hospitals, fire stations), and ensure uniform distribution.
 
@@ -70,7 +71,7 @@ The problem is formulated as a **combinatorial optimization** task and solved us
 
 ---
 
-## ⚙️ Installation & Usage
+## 🚀 Installation & Usage
 
 ### 1. Clone the repository
 
@@ -212,7 +213,7 @@ site-selection-ga/
 3. **Install pre-commit hooks**: `pre-commit install`
 4. **Commit changes**: `git commit -m "Add your feature"`
 5. **Push**: `git push origin feature/your-feature`
-6. **Open a Pull Request**
+6. **Open a Pull Request`
 
 ---
 
@@ -240,4 +241,3 @@ This project is open-source and available under the **MIT License**.
 ---
 
 > *"Optimization is not just about finding the best answer — it's about understanding the problem deeply enough to know what 'best' really means."*
-
